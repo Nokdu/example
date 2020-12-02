@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="cml_stock_after_save">
+        <observer name="cml_stock_after_save" instance="Medgadgets\Productstatus\Module\StockAfterSaveObserver"/>
+    </event>
+    <event name="cml_import_rest_success">
+        <observer name="cml_import_rest_success" instance="Medgadgets\Productstatus\Module\ImportRestSuccessObserver"/>
+    </event>
+    <event name="cml_document_xml">
+        <observer name="cml_document_xml" instance="Medgadgets\Productstatus\Module\DocumentXmlObserver"/>
+    </event>
+    <event name="cml_order_import_after">
+        <observer name="cml_order_import_after" instance="Medgadgets\Productstatus\Module\OrderSaveXmlAfterObserver"/>
+    </event>
+    <event name="cml_edit_before_save">
+        <observer name="cml_edit_before_save" instance="Medgadgets\Productstatus\Module\EditBeforeSaveObserver"/>
+    </event>
+    <event name="catalog_product_save_after">
+        <observer name="catalog_product_save_after" instance="Medgadgets\Productstatus\Module\CatalogProductSaveAfter"/>
+    </event>
+    <event name="cml_sale_order_before_processing">
+        <observer name="cml_sale_order_before_processing" instance="Medgadgets\Productstatus\Module\CmlSaleOrder"/>
+    </event>
+</config>
